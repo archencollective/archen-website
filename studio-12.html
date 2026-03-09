@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio 12 | ARCHEN</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="site-header" id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">ARCHEN.</a>
+            <nav class="nav-links">
+                <a href="studios.html" class="nav-link">Studios</a>
+                <a href="index.html#insights" class="nav-link">Insights</a>
+                <a href="index.html#about" class="nav-link">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Studio Hero -->
+        <section class="studio-hero fade-in visible">
+            <div class="studio-hero-image-wrapper">
+                <img src="assets/project_interior_1.png" alt="Studio 12 Cover" class="studio-hero-image">
+            </div>
+            <div class="container studio-hero-overlay-content">
+                <h1 class="studio-profile-name">Studio 12</h1>
+                <p class="studio-profile-descriptor">Tropical Modern / Luxury Residential</p>
+            </div>
+        </section>
+
+        <!-- About & Stats -->
+        <section class="studio-about-section container">
+            <div class="studio-stats fade-in">
+                <div class="stat-item">
+                    <span class="stat-number">2014</span>
+                    <span class="stat-label">Est.</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">12</span>
+                    <span class="stat-label">Team Size</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">฿20M+</span>
+                    <span class="stat-label">Project Range</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">Bangkok</span>
+                    <span class="stat-label">Base</span>
+                </div>
+            </div>
+
+            <div class="studio-about-text fade-in">
+                <h2>Philosophy</h2>
+                <p>Studio 12 focuses on the intersection of tropical modernism and minimal intervention. Our designs
+                    prioritize passive cooling, raw materials, and seamless integration between indoor and outdoor
+                    spaces. We believe that architecture should frame nature, not compete with it.</p>
+            </div>
+        </section>
+
+        <!-- Portfolio Gallery -->
+        <section class="studio-portfolio container" id="portfolio">
+            <h2 class="section-title fade-in">Selected Works</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item fade-in">
+                    <img src="assets/project_exterior_1.png" alt="Project 1">
+                </div>
+                <div class="portfolio-item fade-in">
+                    <img src="assets/hero_bangkok_house.png" alt="Project 2">
+                </div>
+                <!-- Standardizing aspect ratio with CSS, repeating images for demo -->
+                <div class="portfolio-item fade-in">
+                    <img src="assets/project_pool_1.png" alt="Project 3">
+                </div>
+                <div class="portfolio-item fade-in">
+                    <img src="assets/project_interior_1.png" alt="Project 4">
+                </div>
+            </div>
+        </section>
+
+        <!-- Inquiry Form -->
+        <section class="studio-inquiry container fade-in" id="contact">
+            <div class="inquiry-wrapper">
+                <div class="inquiry-header">
+                    <h2>Start a Conversation</h2>
+                    <p>Inquire directly with Studio 12 about your upcoming project. Serious inquiries only.</p>
+                </div>
+
+                <form class="inquiry-form" onsubmit="event.preventDefault(); alert('Inquiry sent!');">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required placeholder="john@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="project-type">Project Type</label>
+                            <select id="project-type" required>
+                                <option value="" disabled selected>Select Type</option>
+                                <option value="residential">Private Residence</option>
+                                <option value="commercial">Commercial Space</option>
+                                <option value="hospitality">Hospitality / Resort</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Estimated Budget</label>
+                            <select id="budget" required>
+                                <option value="" disabled selected>Select Budget</option>
+                                <option value="10-30">฿10M - ฿30M</option>
+                                <option value="30-50">฿30M - ฿50M</option>
+                                <option value="50+">฿50M+</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="location">Project Location</label>
+                            <input type="text" id="location" required placeholder="e.g. Sukhumvit, Bangkok">
+                        </div>
+                        <div class="form-group">
+                            <label for="timeline">Expected Timeline</label>
+                            <select id="timeline" required>
+                                <option value="" disabled selected>Select Timeline</option>
+                                <option value="immediate">Ready to start</option>
+                                <option value="3-6months">In 3 - 6 months</option>
+                                <option value="exploring">Just exploring</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="details">Project Details</label>
+                        <textarea id="details" rows="5"
+                            placeholder="Briefly describe your vision, site conditions, and any specific requirements."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary submit-btn">Send Inquiry</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">ARCHEN.</a>
+                    <p class="footer-desc">Curating the finest modern architecture practices in Bangkok. Connecting
+                        visionaries with exceptional design talent.</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 ARCHEN. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Directory | ARCHEN</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="site-header" id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">ARCHEN.</a>
+            <nav class="nav-links">
+                <a href="studios.html" class="nav-link">Studios</a>
+                <a href="index.html#insights" class="nav-link">Insights</a>
+                <a href="index.html#about" class="nav-link">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-hero container fade-in visible"
+            style="padding-top: calc(var(--header-height) + var(--space-xl)); padding-bottom: var(--space-lg);">
+            <h1 class="section-title" style="font-size: clamp(3rem, 5vw, 4rem); margin-bottom: var(--space-xs);">
+                Architecture, Selected.</h1>
+            <p style="font-size: 1.2rem; color: var(--color-text-light);">Explore the finest modern architecture firms
+                in Bangkok.</p>
+        </section>
+
+        <!-- Filters & Grid Section -->
+        <section class="studios-directory container" id="studios" style="padding-top: 0;">
+            <div class="filters fade-in">
+                <div class="filter-group">
+                    <label for="budget">Budget Range</label>
+                    <select id="budget">
+                        <option value="all">Any Budget</option>
+                        <option value="medium">฿10M - ฿30M</option>
+                        <option value="high">฿30M - ฿100M+</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="type">Project Type</label>
+                    <select id="type">
+                        <option value="all">All Types</option>
+                        <option value="residential">Residential</option>
+                        <option value="commercial">Commercial</option>
+                        <option value="hospitality">Hospitality</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="emphasis">Design Emphasis</label>
+                    <select id="emphasis">
+                        <option value="all">Any Style</option>
+                        <option value="minimal">Minimalist</option>
+                        <option value="tropical">Tropical Modern</option>
+                        <option value="brutalist">Brutalist</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="location">Location</label>
+                    <select id="location">
+                        <option value="bangkok" selected>Bangkok</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="studio-grid">
+                <!-- 1 -->
+                <a href="studio-1.html" class="studio-card fade-in">
+                    <div class="studio-image-wrapper">
+                        <img src="assets/project_interior_1.png" alt="Studio Project" class="studio-image">
+                    </div>
+                    <div class="studio-info">
+                        <h3 class="studio-name">Studio 1</h3>
+                        <p class="studio-descriptor">Tropical Modern / Residential</p>
+                        <span class="studio-link">View Studio &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- 2 -->
+                <a href="studio-2.html" class="studio-card fade-in">
+                    <div class="studio-image-wrapper">
+                        <img src="assets/project_exterior_2.png" alt="Studio Project" class="studio-image">
+                    </div>
+                    <div class="studio-info">
+                        <h3 class="studio-name">Studio 2</h3>
+                        <p class="studio-descriptor">Contemporary / Commercial</p>
+                        <span class="studio-link">View Studio &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- 3 -->
+                <a href="studio-3.html" class="studio-card fade-in">
+                    <div class="studio-image-wrapper">
+                        <img src="assets/project_pool_1.png" alt="Studio Project" class="studio-image">
+                    </div>
+                    <div class="studio-info">
+                        <h3 class="studio-name">Studio 3</h3>
+                        <p class="studio-descriptor">Contemporary / Public</p>
+                        <span class="studio-link">View Studio &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- 4 -->
+                <a href="studio-4.html" class="studio-card fade-in">
+                    <div class="studio-image-wrapper">
+                        <img src="assets/project_interior_2.png" alt="Studio Project" class="studio-image">
+                    </div>
+                    <div class="studio-info">
+                        <h3 class="studio-name">Studio 4</h3>
+                        <p class="studio-descriptor">Brutalist / Hospitality</p>
+                        <span class="studio-link">View Studio &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- 5 -->
+                <a href="studio-5.html" class="studio-card fade-in">
+                    <div class="studio-image-wrapper">
+                        <img src="assets/project_pool_1.png" alt="Studio Project" class="studio-image">
+                    </div>
+                    <div class="studio-info">
+                        <h3 class="studio-name">Studio 5</h3>
+                        <p class="studio-descriptor">Tropical Modern / Commercial</p>
+                        <span class="studio-link">View Studio &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- 6 -->
+                <a href="studio-6.html" class="studio-card fade-in">
+                    <div class="studio-image-wrapper">
+                        <img src="assets/project_exterior_1.png" alt="Studio Project" class="studio-image">
+                    </div>
+                    <div class="studio-info">
+                        <h3 class="studio-name">Studio 6</h3>
+                        <p class="studio-descriptor">Brutalist / Commercial</p>
+                        <span class="studio-link">View Studio &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- 7 -->
+                <a href="studio-7.html" class="studio-card fade-in">
+                    <div class="studio-image-wrapper">
+                        <img src="assets/hero_bangkok_house.png" alt="Studio Project" class="studio-image">
+                    </div>
+                    <div class="studio-info">
+                        <h3 class="studio-name">Studio 7</h3>
+                        <p class="studio-descriptor">Minimalist / Residential</p>
+                        <span class="studio-link">View Studio &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- 8 -->
+                <a href="studio-8.html" class="studio-card fade-in">
+                    <div class="studio-image-wrapper">
+                        <img src="assets/project_exterior_2.png" alt="Studio Project" class="studio-image">
+                    </div>
+                    <div class="studio-info">
+                        <h3 class="studio-name">Studio 8</h3>
+                        <p class="studio-descriptor">Contemporary / Residential</p>
+                        <span class="studio-link">View Studio &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- 9 -->
+                <a href="studio-9.html" class="studio-card fade-in">
+                    <div class="studio-image-wrapper">
+                        <img src="assets/project_interior_1.png" alt="Studio Project" class="studio-image">
+                    </div>
+                    <div class="studio-info">
+                        <h3 class="studio-name">Studio 9</h3>
+                        <p class="studio-descriptor">Minimalist / Cultural</p>
+                        <span class="studio-link">View Studio &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- 10 -->
+                <a href="studio-10.html" class="studio-card fade-in">
+                    <div class="studio-image-wrapper">
+                        <img src="assets/project_interior_2.png" alt="Studio Project" class="studio-image">
+                    </div>
+                    <div class="studio-info">
+                        <h3 class="studio-name">Studio 10</h3>
+                        <p class="studio-descriptor">Minimalist / Hospitality</p>
+                        <span class="studio-link">View Studio &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- 11 -->
+                <a href="studio-11.html" class="studio-card fade-in">
+                    <div class="studio-image-wrapper">
+                        <img src="assets/project_pool_1.png" alt="Studio Project" class="studio-image">
+                    </div>
+                    <div class="studio-info">
+                        <h3 class="studio-name">Studio 11</h3>
+                        <p class="studio-descriptor">Tropical Modern / Commercial</p>
+                        <span class="studio-link">View Studio &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- 12 -->
+                <a href="studio-12.html" class="studio-card fade-in">
+                    <div class="studio-image-wrapper">
+                        <img src="assets/hero_bangkok_house.png" alt="Studio Project" class="studio-image">
+                    </div>
+                    <div class="studio-info">
+                        <h3 class="studio-name">Studio 12</h3>
+                        <p class="studio-descriptor">Contemporary / Residential</p>
+                        <span class="studio-link">View Studio &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- 13 -->
+                <a href="studio-13.html" class="studio-card fade-in">
+                    <div class="studio-image-wrapper">
+                        <img src="assets/project_exterior_1.png" alt="Studio Project" class="studio-image">
+                    </div>
+                    <div class="studio-info">
+                        <h3 class="studio-name">Studio 13</h3>
+                        <p class="studio-descriptor">Minimalist / Residential</p>
+                        <span class="studio-link">View Studio &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- 14 -->
+                <a href="studio-14.html" class="studio-card fade-in">
+                    <div class="studio-image-wrapper">
+                        <img src="assets/project_interior_2.png" alt="Studio Project" class="studio-image">
+                    </div>
+                    <div class="studio-info">
+                        <h3 class="studio-name">Studio 14</h3>
+                        <p class="studio-descriptor">Contemporary / Commercial</p>
+                        <span class="studio-link">View Studio &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- 15 -->
+                <a href="studio-15.html" class="studio-card fade-in">
+                    <div class="studio-image-wrapper">
+                        <img src="assets/project_exterior_2.png" alt="Studio Project" class="studio-image">
+                    </div>
+                    <div class="studio-info">
+                        <h3 class="studio-name">Studio 15</h3>
+                        <p class="studio-descriptor">Tropical Modern / Public</p>
+                        <span class="studio-link">View Studio &rarr;</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">ARCHEN.</a>
+                    <p class="footer-desc">Curating the finest modern architecture practices in Bangkok. Connecting
+                        visionaries with exceptional design talent.</p>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Discover</h4>
+                    <div class="footer-links">
+                        <a href="studios.html">All Studios</a>
+                        <a href="index.html#insights">Journal</a>
+                        <a href="#">Featured Projects</a>
+                    </div>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Platform</h4>
+                    <div class="footer-links">
+                        <a href="index.html#about">About Us</a>
+                        <a href="#">For Architects</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 ARCHEN. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a> &nbsp;&middot;&nbsp;
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+
+</html>
