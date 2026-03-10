@@ -790,6 +790,19 @@ button {
         /* simple mobile nav approach for later if needed */
     }
 
+    .explanation {
+        padding: 5rem 0;
+        margin: 3rem 0;
+    }
+
+    .studios-directory {
+        padding-bottom: 5rem;
+    }
+
+    .insights-section {
+        padding-top: 7rem;
+    }
+
     .hero-title,
     .studio-profile-name {
         font-size: 2.5rem;
