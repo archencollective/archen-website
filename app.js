@@ -10,6 +10,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // Hero Slideshow
+    const heroImages = document.querySelectorAll('.hero-image');
+    if (heroImages.length > 1) {
+        let currentSlide = 0;
+        setInterval(() => {
+            heroImages[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % heroImages.length;
+            heroImages[currentSlide].classList.add('active');
+        }, 4000); // Change image every 4 seconds
+    }
+
     // Simple intersection observer for fade-in elements
     const fadeElements = document.querySelectorAll('.fade-in');
 
@@ -174,4 +185,31 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
         });
     });
+
+    // --- Match Modal Logic ---
+    const matchBtn = document.getElementById('match-architect-btn');
+    const matchModal = document.getElementById('match-modal');
+    const closeModalBtn = document.getElementById('match-modal-close');
+
+    if (matchBtn && matchModal && closeModalBtn) {
+        // Open modal
+        matchBtn.addEventListener('click', () => {
+            matchModal.classList.add('visible');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+
+        // Close modal
+        closeModalBtn.addEventListener('click', () => {
+            matchModal.classList.remove('visible');
+            document.body.style.overflow = '';
+        });
+
+        // Close modal on outside click
+        matchModal.addEventListener('click', (e) => {
+            if (e.target === matchModal) {
+                matchModal.classList.remove('visible');
+                document.body.style.overflow = '';
+            }
+        });
+    }
 });

@@ -35,13 +35,30 @@
         <!-- Hero Section -->
         <section class="hero" id="home">
             <div class="hero-image-wrapper">
-                <img src="assets/hero_bangkok_house.png" alt="Modern Architecture House in Bangkok" class="hero-image">
+                <img src="assets/junsekino/O%2BO%20House.jpg" alt="Junsekino Architecture" class="hero-image active">
+                <img src="assets/architectkidd/Kuwait%20Embassy.jpg" alt="Architectkidd" class="hero-image">
+                <img src="assets/has/Sky%20Migratory%20Bird%20Observatory%20Residence.JPG" alt="HAS Design and Research"
+                    class="hero-image">
+                <img src="assets/mastertexture/VH%20House.jpg" alt="Master Texture" class="hero-image">
                 <div class="hero-overlay"></div>
             </div>
             <div class="hero-content container fade-in visible">
                 <h1 class="hero-title">Architecture, Selected.<br></h1>
                 <p class="hero-subtitle">Bangkok’s most refined architectural practices.</p>
-                <a href="studios.html" class="btn btn-primary">Explore Studios</a>
+                <div class="hero-actions"
+                    style="flex-direction: column; align-items: flex-start; gap: var(--space-xs);">
+                    <button class="btn btn-primary" id="match-architect-btn"
+                        style="font-size: 1.25rem; padding: 1.25rem 3.5rem; background-color: var(--color-white); color: var(--color-text); font-weight: 500; border-radius: 4px;">Match
+                        Your Architect Now</button>
+                    <a href="studios.html"
+                        style="color: rgba(255,255,255,0.7); font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.3s; margin-top: 0.5rem; padding-left: 0.5rem;">Browse
+                        Studios Directory &rarr;</a>
+                </div>
+                <div class="hero-trust-signals">
+                    <span class="trust-signal">✓ Free matching</span>
+                    <span class="trust-signal">✓ Tailored to your budget</span>
+                    <span class="trust-signal">✓ No obligation</span>
+                </div>
             </div>
         </section>
 
@@ -62,35 +79,37 @@
 
             <div class="studio-grid">
                 <!-- Static studio items -->
-                <a href="studio.html" class="studio-card fade-in">
+                <a href="architectkidd-profile-page.html" class="studio-card fade-in">
                     <div class="studio-image-wrapper">
-                        <img src="assets/project_interior_1.png" alt="Studio Project" class="studio-image">
+                        <img src="assets/architectkidd/The%20Hay%20Equestrian%20Center%20%26%20Eatery.jpg"
+                            alt="Architectkidd Project" class="studio-image">
                     </div>
                     <div class="studio-info">
-                        <h3 class="studio-name">Studio Void</h3>
-                        <p class="studio-descriptor">Tropical Modern / Luxury Residential</p>
+                        <h3 class="studio-name">Architectkidd</h3>
+                        <p class="studio-descriptor">Contemporary / Experimental</p>
                         <span class="studio-link">View Studio &rarr;</span>
                     </div>
                 </a>
 
-                <a href="studio.html" class="studio-card fade-in">
+                <a href="junsekino-profile-page.html" class="studio-card fade-in">
                     <div class="studio-image-wrapper">
-                        <img src="assets/project_exterior_2.png" alt="Studio Project" class="studio-image">
+                        <img src="assets/junsekino/Baan%20Din%20Dang.jpg" alt="Junsekino Project" class="studio-image">
                     </div>
                     <div class="studio-info">
-                        <h3 class="studio-name">Atelier Stone</h3>
-                        <p class="studio-descriptor">Brutalist / Hospitality</p>
+                        <h3 class="studio-name">Junsekino</h3>
+                        <p class="studio-descriptor">Tropical Modern / Residential</p>
                         <span class="studio-link">View Studio &rarr;</span>
                     </div>
                 </a>
 
-                <a href="studio.html" class="studio-card fade-in">
+                <a href="has-profile-page.html" class="studio-card fade-in">
                     <div class="studio-image-wrapper">
-                        <img src="assets/project_pool_1.png" alt="Studio Project" class="studio-image">
+                        <img src="assets/has/Forest%20Villa.jpg" alt="HAS Design and Research Project"
+                            class="studio-image">
                     </div>
                     <div class="studio-info">
-                        <h3 class="studio-name">Line & Light Architects</h3>
-                        <p class="studio-descriptor">Minimalist / Luxury Residential</p>
+                        <h3 class="studio-name">HAS design and research</h3>
+                        <p class="studio-descriptor">Architecture / Research</p>
                         <span class="studio-link">View Studio &rarr;</span>
                     </div>
                 </a>
@@ -109,17 +128,18 @@
             </div>
 
             <div class="insights-grid">
-                <article class="insight-card fade-in">
+                <a href="insight-article.html" class="insight-card fade-in"
+                    style="text-decoration: none; color: inherit; display: block;">
                     <div class="insight-image-wrapper">
                         <img src="assets/project_interior_1.png" alt="Insight Article" class="insight-image">
                     </div>
                     <div class="insight-content">
                         <span class="insight-category">Guide</span>
-                        <h3 class="insight-title">How to Choose the Right Architect in Bangkok</h3>
+                        <h3 class="insight-title">How to Choose the Right Architect for your house</h3>
                         <p class="insight-excerpt">Understanding the nuances of local practice, communication, and
                             design alignment.</p>
                     </div>
-                </article>
+                </a>
 
                 <article class="insight-card fade-in">
                     <div class="insight-image-wrapper">
@@ -186,6 +206,79 @@
             </div>
         </div>
     </footer>
+
+    <!-- Match Modal -->
+    <div class="modal" id="match-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="match-modal-close" aria-label="Close modal">&times;</button>
+            <div class="inquiry-wrapper" style="border: none; padding: var(--space-lg);">
+                <div class="inquiry-header">
+                    <h2 style="font-size: 2rem; font-weight: 300;">Match with an Architect</h2>
+                    <p style="color: var(--color-text-light);">Tell us about your project and we'll connect you with the
+                        perfect studio.</p>
+                    <div class="studio-profile-name" style="display: none;">General Matchmaking Inquiry</div>
+                </div>
+
+                <form class="inquiry-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required placeholder="john@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="project-type">Project Type</label>
+                            <select id="project-type" required>
+                                <option value="" disabled selected>Select Type</option>
+                                <option value="residential">Private Residence</option>
+                                <option value="commercial">Commercial Space</option>
+                                <option value="hospitality">Hospitality / Resort</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Estimated Budget</label>
+                            <select id="budget" required>
+                                <option value="" disabled selected>Select Budget</option>
+                                <option value="10-30">฿10M - ฿30M</option>
+                                <option value="30-50">฿30M - ฿50M</option>
+                                <option value="50+">฿50M+</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="location">Project Location</label>
+                            <input type="text" id="location" required placeholder="e.g. Sukhumvit, Bangkok">
+                        </div>
+                        <div class="form-group">
+                            <label for="timeline">Expected Timeline</label>
+                            <select id="timeline" required>
+                                <option value="" disabled selected>Select Timeline</option>
+                                <option value="immediate">Ready to start</option>
+                                <option value="3-6months">In 3 - 6 months</option>
+                                <option value="exploring">Just exploring</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="details">Project Details</label>
+                        <textarea id="details" rows="5"
+                            placeholder="Briefly describe your vision, site conditions, and any specific requirements."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary submit-btn">Match Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="app.js"></script>
