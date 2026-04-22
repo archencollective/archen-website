@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights Article | ARCHEN</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Editorial Styling */
+        body {
+            background-color: var(--color-bg);
+        }
+
+        .article-main {
+            padding-top: calc(var(--header-height) + var(--space-xl));
+            padding-bottom: var(--space-xxl);
+        }
+
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+            font-family: 'Sarabun', 'Inter', sans-serif;
+            color: var(--color-text);
+        }
+
+        .article-title {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: var(--space-xl);
+            text-align: left;
+        }
+
+        .article-summary-box {
+            background-color: #EFEFEF;
+            padding: var(--space-md) var(--space-lg);
+            border-left: 4px solid var(--color-text);
+            margin-bottom: var(--space-xl);
+        }
+
+        .summary-label {
+            display: inline-block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-text-light);
+            margin-bottom: var(--space-xs);
+        }
+
+        .summary-text {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: var(--color-text);
+        }
+
+        .article-section {
+            margin-bottom: var(--space-xl);
+        }
+
+        .article-heading {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+            line-height: 1.5;
+        }
+
+        .article-body {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--color-text-light);
+        }
+
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: var(--space-md) 0 0 0;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        .article-list li {
+            position: relative;
+            padding-left: 3.5rem;
+            counter-increment: step-counter;
+        }
+
+        .article-list li::before {
+            content: "0" counter(step-counter) ".";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-family: var(--font-primary);
+            font-size: 1.25rem;
+            font-weight: 300;
+            color: var(--color-accent);
+        }
+
+        .article-list li strong {
+            display: block;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.35rem;
+            color: var(--color-text);
+        }
+
+        .article-list li p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--color-text-light);
+        }
+
+        .article-cta {
+            margin-top: var(--space-xxl);
+            padding-top: var(--space-xl);
+            border-top: 1px solid var(--color-border);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .article-cta p {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: var(--space-lg);
+            color: var(--color-text);
+        }
+
+        .btn-cta {
+            padding: 1rem 3.5rem;
+            background-color: var(--color-text) !important;
+            color: var(--color-bg) !important;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            border-radius: 4px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="site-header" id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">ARCHEN.</a>
+            <nav class="nav-links">
+                <a href="studios.html" class="nav-link">Studios</a>
+                <a href="index.html#insights" class="nav-link">Insights</a>
+                <a href="index.html#about" class="nav-link">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="article-main">
+        <article class="article-container fade-in visible">
+            <!-- 1. Title -->
+            <h1 class="article-title">การออกแบบให้เหมาะกับอากาศไทย</h1>
+
+            <!-- 2. Summary Section -->
+            <div class="article-summary-box">
+                <span class="summary-label">Modern กับ Tropical Modern ต่างกันตรงไหน</span>
+                <p class="summary-text">แม้หน้าตาจะดูคล้ายกัน แต่หัวใจของทั้งสองสไตล์ต่างกันชัดเจน
+                    โดยเฉพาะเมื่อเอามาใช้ในประเทศร้อนชื้นอย่างไทย</p>
+            </div>
+
+            <!-- 3. Content Sections -->
+            <section class="article-section">
+                <h2 class="article-heading">เมื่อดีไซน์ต้องเจอกับสภาพอากาศจริง</h2>
+                <p class="article-body">Modern มีต้นกำเนิดจากประเทศอากาศเย็น เน้นเส้นสายเรียบ ใช้กระจกเยอะ
+                    และพื้นที่เปิดโล่ง ซึ่งอาจทำให้เกิดความร้อนสะสมเมื่อใช้ในไทย<br><br>
+                    Tropical Modern จึงเป็นการปรับ Modern ให้เข้ากับอากาศร้อน เช่น การออกแบบให้ลมไหลผ่านได้ดี
+                    มีชายคายื่น
+                    ลดแดด และเพิ่มพื้นที่กึ่ง
+                    outdoor เพื่อช่วยระบายความร้อนโดยธรรมชาติ<br><br>การเลือกสไตล์บ้านในไทยจึงไม่ใช่แค่เรื่องความสวย
+                    แต่เป็นเรื่องของการอยู่อาศัยจริงในระยะยาว</p>
+            </section>
+
+            <!-- 4. Numbered list section (for 4 factors) -->
+            <section class="article-section">
+                <h2 class="article-heading" style="margin-bottom: var(--space-xs);">4 ปัจจัยที่ทำให้ Tropical Modern
+                    เหมาะกับไทยมากกว่า</h2>
+                <ol class="article-list">
+                    <li>
+                        <strong>การออกแบบตามสภาพอากาศ (Adaptation)</strong>
+                        <p>Tropical Modern ถูกออกแบบมาเพื่อรับมือแดด ความชื้น และฝนโดยตรง</p>
+                    </li>
+                    <li>
+                        <strong>การระบายอากาศภายในบ้าน (Ventilation)</strong>
+                        <p>เน้นการไหลเวียนของลม ลดการพึ่งพาแอร์</p>
+                    </li>
+                    <li>
+                        <strong>การป้องกันแสงแดด (Shading)</strong>
+                        <p>มีองค์ประกอบช่วยบังแดด เช่น ชายคาและระแนง</p>
+                    </li>
+                    <li>
+                        <strong>การเลือกใช้วัสดุ (Material)</strong>
+                        <p>เลือกวัสดุที่ไม่อมความร้อนและทนต่อความชื้น เลือกให้ถูก อยู่สบายกว่าในระยะยาว</p>
+                    </li>
+                </ol>
+            </section>
+
+            <!-- 5. Final summary section -->
+            <section class="article-section">
+                <h2 class="article-heading">ควรเลือก Modern Tropical ไหม?</h2>
+                <p class="article-body" style="margin-bottom: var(--space-sm);">
+                    ถ้าสร้างบ้านในไทย Tropical Modern ไม่ใช่แค่ดูดี แต่ช่วยให้บ้านเย็น อยู่สบาย และประหยัดพลังงานมากกว่า
+                </p>
+            </section>
+
+            <!-- 6. Call-to-action (CTA) -->
+            <div class="article-cta">
+                <p>Ready to bring your vision to life?</p>
+                <a href="studios.html" class="btn btn-cta">Explore Studios &rarr;</a>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">ARCHEN.</a>
+                    <p class="footer-desc">Curating the finest modern architecture practices in Bangkok. Connecting
+                        visionaries with exceptional design talent.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ARCHEN. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+
+</html>

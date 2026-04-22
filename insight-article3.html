@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights Article | ARCHEN</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Editorial Styling */
+        body {
+            background-color: var(--color-bg);
+        }
+
+        .article-main {
+            padding-top: calc(var(--header-height) + var(--space-xl));
+            padding-bottom: var(--space-xxl);
+        }
+
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+            font-family: 'Sarabun', 'Inter', sans-serif;
+            color: var(--color-text);
+        }
+
+        .article-title {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: var(--space-xl);
+            text-align: left;
+        }
+
+        .article-summary-box {
+            background-color: #EFEFEF;
+            padding: var(--space-md) var(--space-lg);
+            border-left: 4px solid var(--color-text);
+            margin-bottom: var(--space-xl);
+        }
+
+        .summary-label {
+            display: inline-block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-text-light);
+            margin-bottom: var(--space-xs);
+        }
+
+        .summary-text {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: var(--color-text);
+        }
+
+        .article-section {
+            margin-bottom: var(--space-xl);
+        }
+
+        .article-heading {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+            line-height: 1.5;
+        }
+
+        .article-body {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--color-text-light);
+        }
+
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: var(--space-md) 0 0 0;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        .article-list li {
+            position: relative;
+            padding-left: 3.5rem;
+            counter-increment: step-counter;
+        }
+
+        .article-list li::before {
+            content: "0" counter(step-counter) ".";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-family: var(--font-primary);
+            font-size: 1.25rem;
+            font-weight: 300;
+            color: var(--color-accent);
+        }
+
+        .article-list li strong {
+            display: block;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.35rem;
+            color: var(--color-text);
+        }
+
+        .article-list li p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--color-text-light);
+        }
+
+        .article-cta {
+            margin-top: var(--space-xxl);
+            padding-top: var(--space-xl);
+            border-top: 1px solid var(--color-border);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .article-cta p {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: var(--space-lg);
+            color: var(--color-text);
+        }
+
+        .btn-cta {
+            padding: 1rem 3.5rem;
+            background-color: var(--color-text) !important;
+            color: var(--color-bg) !important;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            border-radius: 4px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="site-header" id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">ARCHEN.</a>
+            <nav class="nav-links">
+                <a href="studios.html" class="nav-link">Studios</a>
+                <a href="index.html#insights" class="nav-link">Insights</a>
+                <a href="index.html#about" class="nav-link">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="article-main">
+        <article class="article-container fade-in visible">
+            <!-- 1. Title -->
+            <h1 class="article-title">ค่าออกแบบสถาปนิกคิดยังไง</h1>
+
+            <!-- 2. Summary Section -->
+            <div class="article-summary-box">
+                <span class="summary-label">ค่าออกแบบสถาปนิกคืออะไรบ้าง</span>
+                <p class="summary-text">หลายคนสงสัยว่าค่าออกแบบคิดยังไง ซึ่งจริง ๆ
+                    แล้วขึ้นอยู่กับรูปแบบการคิดราคาและขอบเขตงาน</p>
+            </div>
+
+            <!-- 3. Content Sections -->
+            <section class="article-section">
+                <h2 class="article-heading">โครงสร้างค่าบริการที่ควรรู้ก่อนจ้าง</h2>
+                <p class="article-body">สถาปนิกมักคิดค่าบริการ 3 รูปแบบหลัก คือ คิดเป็นเปอร์เซ็นต์จากค่าก่อสร้าง
+                    ราคาเหมารวม หรือคิดเป็นรายชั่วโมง สำหรับบ้านพักอาศัยทั่วไป จะอยู่ประมาณ 5%–15% ของงบก่อสร้าง
+                    โดยขึ้นอยู่กับว่าดูแลมากน้อยแค่ไหน ถ้าเป็น Full Service จะครอบคลุมตั้งแต่แนวคิด ออกแบบ
+                    ไปจนถึงควบคุมงานก่อสร้าง แต่ถ้าเลือกแค่ทำแบบ ค่าใช้จ่ายก็จะลดลง</p>
+            </section>
+
+            <!-- 4. Numbered list section (for 4 factors) -->
+            <section class="article-section">
+                <h2 class="article-heading" style="margin-bottom: var(--space-xs);">ปัจจัยที่มีผลต่อค่าบริการ</h2>
+                <ol class="article-list">
+                    <li>
+                        <strong>ขอบเขตของงาน (Scope of Work)</strong>
+                        <p>งานครบทุกขั้นตอนจะมีราคาสูงกว่างานบางส่วน</p>
+                    </li>
+                    <li>
+                        <strong>ความซับซ้อนของงานออกแบบ (Complexity)</strong>
+                        <p>บ้านที่มีดีเทลเยอะ หรือดีไซน์เฉพาะตัว จะใช้เวลามากขึ้น</p>
+                    </li>
+                    <li>
+                        <strong>ประสบการณ์ (Experience)</strong>
+                        <p>ประสบการณ์สูงขึ้น ค่าใช้จ่ายก็มักสูงขึ้นตาม ระดับการออกแบบเฉพาะบุคคล</p>
+                    </li>
+                    <li>
+                        <strong>งานที่ปรับตามความต้องการลูกค้าแบบละเอียด (Customization)</strong>
+                        <p>จะใช้เวลาและต้นทุนมากกว่า</p>
+                    </li>
+                </ol>
+            </section>
+
+            <!-- 5. Final summary section -->
+            <section class="article-section">
+                <h2 class="article-heading">คุ้มค่าที่จะลงทุนไหม?</h2>
+                <p class="article-body" style="margin-bottom: var(--space-sm);">
+                    มองค่าออกแบบเป็นการลงทุน การจ้างสถาปนิกที่เหมาะสม อาจช่วยลดปัญหาหน้างาน
+                    และทำให้ได้บ้านที่ตรงความต้องการจริงในระยะยาว</p>
+            </section>
+
+            <!-- 6. Call-to-action (CTA) -->
+            <div class="article-cta">
+                <p>Ready to bring your vision to life?</p>
+                <a href="studios.html" class="btn btn-cta">Explore Studios &rarr;</a>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">ARCHEN.</a>
+                    <p class="footer-desc">Curating the finest modern architecture practices in Bangkok. Connecting
+                        visionaries with exceptional design talent.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ARCHEN. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+
+</html>
